@@ -23,7 +23,7 @@ public class SpringbootMybatisApplicationTests {
 	
 	@Test
 	public void contextLoads() {
-		Hr hr = hrMapper.selectByPrimaryKey(3);
+		Hr hr = hrMapper.findHrByUserName("admin");
 		String tokenString = jwtTokenUtil.generateToken(hr);
 		Logger logger = LoggerFactory.getLogger(getClass());
 		logger.info(tokenString);

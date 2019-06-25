@@ -149,4 +149,12 @@
       remark = #{remark,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <!-- 手动追加 -->
+  <select id="findHrByUserName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from hr
+    where username = #{username}
+  </select>
 </mapper>

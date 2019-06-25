@@ -10,7 +10,10 @@ import java.util.Collection;
 import java.util.List;
 
 public class Hr implements UserDetails {
-    private Integer id;
+
+	private static final long serialVersionUID = -313993863526226983L;
+
+	private Integer id;
 
     private String name;
 
