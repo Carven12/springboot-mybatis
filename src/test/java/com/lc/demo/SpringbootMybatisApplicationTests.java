@@ -8,23 +8,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.lc.demo.entity.Employee;
-import com.lc.demo.mapper.EmployeeMapper;
+import com.lc.demo.entity.Hr;
+import com.lc.demo.mapper.HrMapper;
+import com.lc.demo.utils.JwtTokenUtil;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringbootMybatisApplicationTests {
-
+	
 	@Autowired
-	private EmployeeMapper employeeMapper;
-	
-	
-	
+	HrMapper hrMapper;
+	@Autowired
+	JwtTokenUtil jwtTokenUtil;
 	
 	@Test
 	public void contextLoads() {
-		Employee employee = employeeMapper.selectByPrimaryKey(1);
-		System.out.print(employee.toString());
+		Hr hr = hrMapper.selectByPrimaryKey(3);
+		String tokenString = jwtTokenUtil.generateToken(hr);
+		Logger logger = LoggerFactory.getLogger(getClass());
+		logger.info(tokenString);
 	}
 
 }
