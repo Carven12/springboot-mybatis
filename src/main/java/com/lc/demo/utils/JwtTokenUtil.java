@@ -4,10 +4,11 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
+import com.lc.demo.config.JwtConfig;
 import com.lc.demo.entity.Hr;
 
 import java.io.Serializable;
@@ -26,16 +27,8 @@ public class JwtTokenUtil implements Serializable {
 
 	private static final long serialVersionUID = -1214536764876730082L;
 	
-	/**
-	 * 密钥
-	 */
-	@Value("${jwt.secret}")
-    private String secret;
-    /**
-          * 有效期
-     */
-	@Value("${jwt.expiration}")
-    private Long expiration; 
+	@Autowired
+	private JwtConfig jwtConfig;
 
     /**
           * 从数据声明生成令牌
@@ -44,12 +37,12 @@ public class JwtTokenUtil implements Serializable {
      * @return 令牌
      */
     private String generateToken(Map<String, Object> claims) {
-        Date expirationDate = new Date(System.currentTimeMillis() + expiration * 1000);
-        return Jwts.builder().setClaims(claims).setExpiration(expirationDate).signWith(SignatureAlgorithm.HS512, secret).compact();
+        Date expirationDate = new Date(System.currentTimeMillis() + jwtConfig.getExpiration() * 1000);
+        return Jwts.builder().setClaims(claims).setExpiration(expirationDate).signWith(SignatureAlgorithm.HS512, jwtConfig.getSecret()).compact();
     }
 
     /**
-          * 从令牌中获取数据声明
+     * 从令牌中获取数据声明
      *
      * @param token 令牌
      * @return 数据声明
@@ -57,7 +50,7 @@ public class JwtTokenUtil implements Serializable {
     private Claims getClaimsFromToken(String token) {
         Claims claims;
         try {
-            claims = Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+            claims = Jwts.parser().setSigningKey(jwtConfig.getSecret()).parseClaimsJws(token).getBody();
         } catch (Exception e) {
             claims = null;
         }
@@ -65,7 +58,7 @@ public class JwtTokenUtil implements Serializable {
     }
 
     /**
-          * 生成令牌
+     * 生成令牌
      *
      * @param userDetails 用户
      * @return 令牌
@@ -78,7 +71,7 @@ public class JwtTokenUtil implements Serializable {
     }
 
     /**
-          * 从令牌中获取用户名
+     * 从令牌中获取用户名
      *
      * @param token 令牌
      * @return 用户名
@@ -95,7 +88,7 @@ public class JwtTokenUtil implements Serializable {
     }
 
     /**
-          * 判断令牌是否过期
+     * 判断令牌是否过期
      *
      * @param token 令牌
      * @return 是否过期
@@ -111,7 +104,7 @@ public class JwtTokenUtil implements Serializable {
     }
 
     /**
-          * 刷新令牌
+     * 刷新令牌
      *
      * @param token 原令牌
      * @return 新令牌
@@ -129,7 +122,7 @@ public class JwtTokenUtil implements Serializable {
     }
 
     /**
-          * 验证令牌
+     * 验证令牌
      *
      * @param token       令牌
      * @param userDetails 用户
