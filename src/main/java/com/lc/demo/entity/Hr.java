@@ -35,7 +35,14 @@ public class Hr implements UserDetails {
     
     private List<Role> roles;
 
-    public List<Role> getRoles() {
+    public Hr(String username,
+			String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
+
+	public List<Role> getRoles() {
 		return roles;
 	}
 
