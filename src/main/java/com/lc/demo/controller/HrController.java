@@ -1,20 +1,11 @@
 package com.lc.demo.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.DisabledException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSONObject;
-import com.lc.demo.entity.Hr;
 import com.lc.demo.entity.RespModel;
 
 @RestController
@@ -32,11 +23,12 @@ public class HrController {
 //		return employee;
 //	}
 	
-	@RequestMapping(path = "/login", method = RequestMethod.POST)
+	@RequestMapping(path = "/auth/login", method = RequestMethod.POST)
 	public RespModel login(@RequestBody JSONObject json) {
-		String username = json.getString("username");
-		String password = json.getString("password");
-		return null;
+//		String username = json.getString("username");
+//		String password = json.getString("password");
+		RespModel respModel = new RespModel(200, "", json);
+		return respModel;
 	}
 	
 

@@ -1,7 +1,6 @@
 package com.lc.demo.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -42,8 +41,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public WebSecurityConfig(JwtAuthenticationEntryPoint unauthorizedHandler,
-                             @Qualifier("RestAuthenticationAccessDeniedHandler") AccessDeniedHandler accessDeniedHandler,
-                             @Qualifier("CustomUserDetailsService") UserDetailsService CustomUserDetailsService,
+                             AccessDeniedHandler accessDeniedHandler,
+                             UserDetailsService CustomUserDetailsService,
                              JwtAuthenticationTokenFilter authenticationTokenFilter) {
         this.unauthorizedHandler = unauthorizedHandler;
         this.accessDeniedHandler = accessDeniedHandler;
@@ -78,7 +77,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
 
                 // 对于获取token的rest api要允许匿名访问
-                .antMatchers("/api/v1/auth", "/api/v1/signout", "/error/**", "/api/**").permitAll()
+                .antMatchers("/auth/login", "/auth/logout").permitAll()
                 // 不拦截options的请求
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 // 除上面外的所有请求全部需要鉴权认证
@@ -94,12 +93,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/v2/api-docs",
-                "/swagger-resources/configuration/ui",
-                "/swagger-resources",
-                "/swagger-resources/configuration/security",
-                "/swagger-ui.html"
+    	// 忽略对swagger相关请求的拦截
+        web.ignoring().antMatchers("/v2/**",
+                "/configuration/ui",
+                "/swagger-resources/**",
+                "/configuration/security",
+                "/swagger-ui.html",
+                "/webjars/**"
         );
+        // 忽略对druid相关请求的拦截
+        web.ignoring().antMatchers("/druid/**");
     }
 
     @Bean
