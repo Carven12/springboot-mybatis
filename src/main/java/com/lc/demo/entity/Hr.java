@@ -23,7 +23,7 @@ public class Hr implements UserDetails {
 
     private String address;
 
-    private Boolean enabled;
+    private Boolean enabled = true;
 
     private String username;
 
@@ -33,21 +33,21 @@ public class Hr implements UserDetails {
 
     private String remark;
     
-    private List<Role> roles;
+    private Role role;
 
-    public Hr(String username,
+    public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+	public Hr(String username,
 			String password) {
 		super();
 		this.username = username;
 		this.password = password;
-	}
-
-	public List<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(List<Role> roles) {
-		this.roles = roles;
 	}
 
 	public Integer getId() {
@@ -121,9 +121,7 @@ public class Hr implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = new ArrayList<>();
-        for (Role role : roles) {
-            authorities.add(new SimpleGrantedAuthority(role.getName()));
-        }
+        authorities.add(new SimpleGrantedAuthority("admin"));
         return authorities;
     }
 

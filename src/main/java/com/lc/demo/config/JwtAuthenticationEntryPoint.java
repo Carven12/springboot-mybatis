@@ -12,8 +12,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
-import com.alibaba.fastjson.JSON;
-import com.lc.demo.entity.RespModel;
+import com.lc.demo.entity.ResultCode;
+import com.lc.demo.entity.ResultJson;
 
 /**
   *  认证失败处理类，返回401
@@ -34,9 +34,9 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
         response.setStatus(200);
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json; charset=utf-8");
-        RespModel respModel = new RespModel(401, "token验证失败！");
         PrintWriter printWriter = response.getWriter();
-        printWriter.write(JSON.toJSONString(respModel));
+        String body = ResultJson.failure(ResultCode.UNAUTHORIZED, authException.getMessage()).toString();
+        printWriter.write(body);
         printWriter.flush();
         
 	}
