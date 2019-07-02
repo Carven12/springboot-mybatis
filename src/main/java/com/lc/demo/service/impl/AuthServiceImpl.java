@@ -83,7 +83,6 @@ public class AuthServiceImpl implements AuthService {
 	@Override
 	public void logout(String token) {
 		// TODO Auto-generated method stub
-
 	}
 	
 	/**
