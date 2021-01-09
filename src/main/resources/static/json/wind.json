@@ -1,0 +1,404 @@
+{
+	"windHR": [
+		{
+			"category": "公司文化",
+			"key": "理想",
+			"value": [
+				{
+					"item": "立志做一家让数据垂手可得的世界级企业"
+				}
+			]
+		},
+		{
+			"category": "公司文化",
+			"key": "使命",
+			"value": [
+				{
+					"item": "分享数据价值"
+				}
+			]
+		},
+		{
+			"category": "公司文化",
+			"key": "价值观",
+			"value": [
+				{
+					"item": "要正"
+				},
+				{
+					"item": "要爱"
+				},
+				{
+					"item": "要严"
+				},
+				{
+					"item": "要美"
+				}
+			]
+		},
+		{
+			"category": "绩效管理",
+			"key": "6M",
+			"value": [
+				{
+					"item": "Strategy.M"
+				},
+				{
+					"item": "Process.M"
+				},
+				{
+					"item": "KPI.M"
+				},
+				{
+					"item": "Talent.M"
+				},
+				{
+					"item": "Career.M"
+				},
+				{
+					"item": "Performance.M"
+				}
+			]
+		},
+		{
+			"category": "组织管理",
+			"key": "3S",
+			"value": [
+				{
+					"item": "Strategy"
+				},
+				{
+					"item": "System"
+				},
+				{
+					"item": "Structure"
+				}
+			]
+		},
+		{
+			"category": "团队管理",
+			"key": "3T",
+			"value": [
+				{
+					"item": "Teamwork"
+				},
+				{
+					"item": "Talk"
+				},
+				{
+					"item": "Training"
+				}
+			]
+		},
+		{
+			"category": "项目管理",
+			"key": "3W",
+			"value": [
+				{
+					"item": "What"
+				},
+				{
+					"item": "Who"
+				},
+				{
+					"item": "When"
+				}
+			]
+		},
+		{
+			"category": "项目管理",
+			"key": "3C",
+			"value": [
+				{
+					"item": "Check"
+				},
+				{
+					"item": "Communication"
+				},
+				{
+					"item": "Close"
+				}
+			]
+		},
+		{
+			"category": "关键词",
+			"key": "关键词",
+			"value": [
+				{
+					"item": "交易"
+				},
+				{
+					"item": "连接"
+				},
+				{
+					"item": "智能"
+				},
+				{
+					"item": "开放"
+				}
+			]
+		},
+		{
+			"category": "方法论",
+			"key": "方法论",
+			"value": [
+				{
+					"item": "队伍第一"
+				},
+				{
+					"item": "方向第二"
+				},
+				{
+					"item": "产品第三"
+				},
+				{
+					"item": "口碑第四"
+				},
+				{
+					"item": "试错第五"
+				}
+			]
+		},
+		{
+			"category": "观念",
+			"key": "观念",
+			"value": [
+				{
+					"item": "机器管事、流程推动"
+				},
+				{
+					"item": "文化管人、精神同轨"
+				},
+				{
+					"item": "文化是打出来的，最小的作战单元才是最重要的"
+				},
+				{
+					"item": "坚守初心，要做就彻底地做好一件事"
+				}
+			]
+		}
+	],
+	"windTech": [
+		{
+			"category": "万得技术基础设施",
+			"key": "分布式文件系统",
+			"value": [
+				{
+					"item": "GlusterFS"
+				}
+			]
+		},
+		{
+			"category": "万得技术基础设施",
+			"key": "数据库层",
+			"value": [
+				{
+					"item": "MySQL"
+				},
+				{
+					"item": "Oracle"
+				},
+				{
+					"item": "MongoDB"
+				}
+			]
+		},
+		{
+			"category": "万得技术基础设施",
+			"key": "Cache层",
+			"value": [
+				{
+					"item": "MemCache"
+				},
+				{
+					"item": "Redis"
+				}
+			]
+		},
+		{
+			"category": "万得技术基础设施",
+			"key": "MQ",
+			"value": [
+				{
+					"item": "RabittMQ"
+				},
+				{
+					"item": "Kafaka"
+				}
+			]
+		},
+		{
+			"category": "万得技术基础设施",
+			"key": "消息通知",
+			"value": [
+				{
+					"item": "Push"
+				}
+			]
+		},
+		{
+			"category": "万得基础服务",
+			"key": "接入代理",
+			"value": [
+				{
+					"item": "Sky",
+					"url": "http://home:8000/WindEIP/Training/College/ShowAdditional.aspx?additionalId=14532"
+				}
+			]
+		},
+		{
+			"category": "万得基础服务",
+			"key": "企业总线",
+			"value": [
+				{
+					"item": "Expo",
+					"url": "http://home:8000/WindEIP/Training/College/ShowAdditional.aspx?additionalId=14650"
+				}
+			]
+		},
+		{
+			"category": "万得基础服务",
+			"key": "统一的数据运算平台",
+			"value": [
+				{
+					"item": "Cloud",
+					"url": "http://home:8000/WindEIP/Training/College/ShowAdditional.aspx?additionalId=14519"
+				}
+			]
+		},
+		{
+			"category": "万得基础服务",
+			"key": "行情数据提供者",
+			"value": [
+				{
+					"item": "Speed",
+					"url": "http://home:8000/WindEIP/Training/College/ShowAdditional.aspx?additionalId=14518"
+				}
+			]
+		},
+		{
+			"category": "万得基础服务",
+			"key": "资讯数据提供者",
+			"value": [
+				{
+					"item": "Ocean",
+					"url": "http://home:8000/WindEIP/Training/College/ShowAdditional.aspx?additionalId=14521"
+				}
+			]
+		},
+		{
+			"category": "万得研发工具箱",
+			"key": "监控服务",
+			"value": [
+				{
+					"item": "Eagle",
+					"url": "http://home:8000/WindEIP/Training/College/ShowAdditional.aspx?additionalId=14649"
+				}
+			]
+		},
+		{
+			"category": "万得研发工具箱",
+			"key": "持续集成工具",
+			"value": [
+				{
+					"item": "软件仓库",
+					"url": "http://home:8000/WindEIP/Training/College/ShowAdditional.aspx?additionalId=24954"
+				}
+			]
+		},
+		{
+			"category": "万得研发工具箱",
+			"key": "知识分享与社区",
+			"value": [
+				{
+					"item": "知识管理系统",
+					"url": "http://10.102.17.181/KMS/app/index.html#/"
+				}
+			]
+		},
+		{
+			"category": "万得研发标准",
+			"key": "编码标准",
+			"value": [
+				{
+					"item": "C++",
+					"url": "http://10.102.17.181/KMS/app/index.html#/kbase/docDetail?cid=6&id=42"
+				},
+				{
+					"item": "Object-C",
+					"url": "http://10.102.17.181/KMS/app/index.html#/kbase/docDetail?cid=6&id=40"
+				},
+				{
+					"item": "Java",
+					"url": "http://10.102.17.181/KMS/app/index.html#/kbase/docDetail?cid=6&id=39"
+				},
+				{
+					"item": "Delphi",
+					"url": "http://10.102.17.181/KMS/app/index.html#/kbase/docDetail?cid=6&id=38"
+				},
+				{
+					"item": "C#",
+					"url": "http://10.102.17.181/KMS/app/index.html#/kbase/docDetail?cid=6&id=37"
+				},
+				{
+					"item": "ASP.NET",
+					"url": "http://10.102.17.181/KMS/app/index.html#/kbase/docDetail?cid=6&id=44"
+				},
+				{
+					"item": "JavaScript 规范",
+					"url": "http://10.102.17.181/KMS/app/index.html#/kbase/docDetail?cid=6&id=1"
+				}
+			]
+		},
+		{
+			"category": "万得研发标准",
+			"key": "设计标准",
+			"value": [
+				{
+					"item": "SQL SERVER设计规范标准指南",
+					"url": "http://10.102.17.181/KMS/app/index.html#/kbase/docDetail?cid=6&id=41"
+				},
+				{
+					"item": "数据库设计规范标准指南",
+					"url": "http://10.102.17.181/KMS/app/index.html#/kbase/docDetail?cid=6&id=43"
+				},
+				{
+					"item": "UI设计规范-Wind Design",
+					"url": "http://10.102.17.181:8001/index-cn"
+				},
+				{
+					"item": "UI设计规范-Wind Design of React",
+					"url": "http://10.102.17.181:8001/docs/react/introduce-cn"
+				},
+				{
+					"item": "Web标准",
+					"url": "http://10.102.17.181/WebFramework/Help/index.html#/frame/classic"
+				}
+			]
+		},
+		{
+			"category": "万得研发标准",
+			"key": "组件规范",
+			"value": [
+				{
+					"item": "C#组件规范",
+					"url": "http://home:8000/winddeveloperhome/CMMIDocs/WindCSharp??????è§?è??/index.html"
+				},
+				{
+					"item": "Java组件规范",
+					"url": "http://home:8000/winddeveloperhome/CMMIDocs/WindJava??????è§?è??/index.html"
+				}
+			]
+		},
+		{
+			"category": "万得研发标准",
+			"key": "配置管理",
+			"value": [
+				{
+					"item": "产品基线管理办法",
+					"url": "http://10.102.17.181/KMS/app/index.html#/kbase/docDetail?cid=45&id=46"
+				}
+			]
+		}
+	]
+}

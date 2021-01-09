@@ -2,6 +2,9 @@ package com.lc.demo.entity;
 
 import java.io.Serializable;
 
+/**
+ * @author liangc
+ */
 public class ResultJson<T> implements Serializable {
 	/**
 	 * 
