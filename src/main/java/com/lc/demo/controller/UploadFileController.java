@@ -3,6 +3,7 @@ package com.lc.demo.controller;
 import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -44,7 +45,7 @@ public class UploadFileController {
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/uploadFiles", method = RequestMethod.POST)
+    @RequestMapping(value = "/uploadFiles", method = RequestMethod.POST, consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public JSONObject uploadFiles(@RequestParam("files") MultipartFile[] files) {
         JSONObject jsonObject = new JSONObject();
         List<JSONObject> fileList = new ArrayList<>();

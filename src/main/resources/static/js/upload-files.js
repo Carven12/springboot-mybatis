@@ -162,7 +162,7 @@ jQuery(function(){
 
             var request = $.ajax({
                 type: "POST",
-                url: "/ssmDemo/v1/api/uploadFiles",
+                url: "/ssmDemo/v1/api/aliBills",
                 data: formData,			//这里上传的数据使用了formData 对象
                 processData : false, 	//必须false才会自动加上正确的Content-Type
                 contentType : false,
